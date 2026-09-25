@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boletim Digital - 8º Ano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Cabeçalho do Boletim -->
+    <header class="cabecalho">
+      <h1>Boletim Digital</h1>
+      <p class="subtitulo">8º Ano | Estudante Exemplo</p>
+    </header>
+
+    <!-- Área de Cards de Resumo -->
+    <section class="cards-resumo">
+      <div class="card">
+        <h3>Média Geral</h3>
+        <p id="card-media-geral">—</p>
+      </div>
+      <div class="card">
+        <h3>Total de Faltas</h3>
+        <p id="card-total-faltas">—</p>
+      </div>
+      <div class="card">
+        <h3>Bom Desempenho</h3>
+        <p id="card-bom-desempenho">—</p>
+      </div>
+      <div class="card">
+        <h3>Atenção</h3>
+        <p id="card-atencao">—</p>
+      </div>
+      <div class="card">
+        <h3>Frequência</h3>
+        <p id="card-frequencia">92% <span class="tag-frequencia">(Adequada)</span></p>
+      </div>
+    </section>
+
+    <!-- Tabela de Disciplinas -->
+    <section class="secao-tabela">
+      <h2>Notas e Desempenho</h2>
+      <div class="tabela-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>1º Tri</th>
+              <th>2º Tri</th>
+              <th>3º Tri</th>
+              <th>Média</th>
+              <th>Faltas</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-corpo">
+            <!-- As linhas da tabela serão preenchidas automaticamente pelo JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
