@@ -38,6 +38,139 @@ body {
   margin-top: 5px;
 }
 
+/* Área de Acesso (PIN) */
+.secao-acesso {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.card-acesso {
+  background-color: #18181b;
+  border: 1px solid #3f3f46;
+  border-top: 4px solid #8b5cf6;
+  padding: 25px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.card-acesso h2 {
+  font-size: 1.3rem;
+  color: #c4b5fd;
+  margin-bottom: 15px;
+}
+
+.info-estudante {
+  background-color: #27272a;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.info-estudante p {
+  font-size: 0.95rem;
+  color: #a1a1aa;
+  margin: 4px 0;
+}
+
+.info-estudante strong {
+  color: #e1e1e6;
+}
+
+.form-pin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-pin label {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  text-align: left;
+}
+
+.form-pin input {
+  padding: 10px;
+  background-color: #0f0f12;
+  border: 1px solid #3f3f46;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.form-pin input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+}
+
+.form-pin button {
+  padding: 10px;
+  background-color: #8b5cf6;
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-pin button:hover {
+  background-color: #7c3aed;
+}
+
+.mensagem-status {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  min-height: 20px;
+  color: #f87171;
+}
+
+/* Painel de Ações / Edição */
+.barras-acoes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+}
+
+.barras-acoes button {
+  padding: 8px 16px;
+  background-color: #8b5cf6;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.barras-acoes button:hover {
+  background-color: #7c3aed;
+}
+
+#btn-cancelar-edicao {
+  background-color: #3f3f46;
+}
+
+#btn-cancelar-edicao:hover {
+  background-color: #52525b;
+}
+
+/* Inputs de Edição na Tabela */
+.input-edicao {
+  width: 60px;
+  padding: 5px;
+  background-color: #0f0f12;
+  border: 1px solid #3f3f46;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.input-edicao.invalido {
+  border-color: #ef4444;
+  background-color: #451a1a;
+}
+
 /* Cards de Resumo */
 .cards-resumo {
   display: grid;
@@ -71,61 +204,3 @@ body {
 .tag-frequencia {
   display: block;
   font-size: 0.75rem;
-  color: #10b981; /* Verde para indicação positiva */
-  font-weight: normal;
-  margin-top: 4px;
-}
-
-/* Seção da Tabela */
-.secao-tabela h2 {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  color: #c4b5fd;
-}
-
-/* Tabela Responsiva */
-.tabela-container {
-  overflow-x: auto; /* Permite rolar pro lado em telas de celular */
-  background-color: #18181b;
-  border: 1px solid #27272a;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-th, td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #27272a;
-  white-space: nowrap;
-}
-
-th {
-  background-color: #27272a;
-  color: #c4b5fd;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-}
-
-tr:hover {
-  background-color: #222226; /* Efeito de destaque ao passar o mouse */
-}
-
-/* Estilos para as Situações */
-.situacao-bom {
-  color: #34d399; /* Verde */
-  font-weight: 600;
-}
-
-.situacao-atencao {
-  color: #f87171; /* Vermelho/Laranja */
-  font-weight: 600;
-}
-
-.situacao-indisponivel {
-  color: #a1a1aa; /* Cinza */
-  font-style: italic;
-}

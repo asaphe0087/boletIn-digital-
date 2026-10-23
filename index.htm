@@ -12,55 +12,84 @@
     <!-- Cabeçalho do Boletim -->
     <header class="cabecalho">
       <h1>Boletim Digital</h1>
-      <p class="subtitulo">8º Ano | Estudante Exemplo</p>
+      <p class="subtitulo">8º Ano | Turma 8A - Chamada Nº 2</p>
     </header>
 
-    <!-- Área de Cards de Resumo -->
-    <section class="cards-resumo">
-      <div class="card">
-        <h3>Média Geral</h3>
-        <p id="card-media-geral">—</p>
-      </div>
-      <div class="card">
-        <h3>Total de Faltas</h3>
-        <p id="card-total-faltas">—</p>
-      </div>
-      <div class="card">
-        <h3>Bom Desempenho</h3>
-        <p id="card-bom-desempenho">—</p>
-      </div>
-      <div class="card">
-        <h3>Atenção</h3>
-        <p id="card-atencao">—</p>
-      </div>
-      <div class="card">
-        <h3>Frequência</h3>
-        <p id="card-frequencia">92% <span class="tag-frequencia">(Adequada)</span></p>
+    <!-- Área de Acesso (PIN) -->
+    <section id="secao-acesso" class="secao-acesso">
+      <div class="card-acesso">
+        <h2>Acesso ao Boletim</h2>
+        <div class="info-estudante">
+          <p><strong>Série:</strong> 8º Ano</p>
+          <p><strong>Turma:</strong> 8A</p>
+          <p><strong>Chamada:</strong> Nº 2</p>
+        </div>
+        <div class="form-pin">
+          <label for="campo-pin">Digite seu PIN:</label>
+          <input type="password" id="campo-pin" placeholder="PIN" maxlength="10">
+          <button id="btn-entrar" onclick="fazerLogin()">Entrar</button>
+        </div>
+        <p id="mensagem-status" class="mensagem-status"></p>
       </div>
     </section>
 
-    <!-- Tabela de Disciplinas -->
-    <section class="secao-tabela">
-      <h2>Notas e Desempenho</h2>
-      <div class="tabela-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Disciplina</th>
-              <th>1º Tri</th>
-              <th>2º Tri</th>
-              <th>3º Tri</th>
-              <th>Média</th>
-              <th>Faltas</th>
-              <th>Situação</th>
-            </tr>
-          </thead>
-          <tbody id="tabela-corpo">
-            <!-- As linhas da tabela serão preenchidas automaticamente pelo JavaScript -->
-          </tbody>
-        </table>
+    <!-- Conteúdo do Boletim (Oculto até o login) -->
+    <div id="conteudo-boletim" class="conteudo-boletim" style="display: none;">
+      
+      <!-- Painel de Ações / Edição -->
+      <div class="barras-acoes">
+        <button id="btn-alterar-dados" onclick="toggleEdicao()">Alterar dados</button>
+        <button id="btn-salvar-dados" onclick="salvarDadosApi()" style="display: none;">Salvar alterações</button>
+        <button id="btn-cancelar-edicao" onclick="cancelarEdicao()" style="display: none;">Cancelar</button>
       </div>
-    </section>
+
+      <!-- Área de Cards de Resumo -->
+      <section class="cards-resumo">
+        <div class="card">
+          <h3>Média Geral</h3>
+          <p id="card-media-geral">—</p>
+        </div>
+        <div class="card">
+          <h3>Total de Faltas</h3>
+          <p id="card-total-faltas">—</p>
+        </div>
+        <div class="card">
+          <h3>Bom Desempenho</h3>
+          <p id="card-bom-desempenho">—</p>
+        </div>
+        <div class="card">
+          <h3>Atenção</h3>
+          <p id="card-atencao">—</p>
+        </div>
+        <div class="card">
+          <h3>Frequência</h3>
+          <p id="card-frequencia">92% <span class="tag-frequencia">(Adequada)</span></p>
+        </div>
+      </section>
+
+      <!-- Tabela de Disciplinas -->
+      <section class="secao-tabela">
+        <h2>Notas e Desempenho</h2>
+        <div class="tabela-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Disciplina</th>
+                <th>1º Tri</th>
+                <th>2º Tri</th>
+                <th>3º Tri</th>
+                <th>Média</th>
+                <th>Faltas</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-corpo">
+              <!-- As linhas da tabela serão preenchidas automaticamente pelo JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
   </div>
 
   <script src="script.js"></script>
