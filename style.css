@@ -183,7 +183,7 @@ body {
   background-color: #18181b; /* Fundo dos cards */
   border: 1px solid #3f3f46; /* Borda sutil */
   border-top: 4px solid #8b5cf6; /* Destaque roxo no topo */
-  border-radius: 0; /* Cantos retos escolhidos por você */
+  border-radius: 0; /* Cantos retos */
   padding: 15px;
   text-align: center;
 }
@@ -204,3 +204,156 @@ body {
 .tag-frequencia {
   display: block;
   font-size: 0.75rem;
+  color: #a1a1aa;
+  margin-top: 4px;
+}
+
+/* Tabela de Disciplinas */
+.secao-tabela {
+  margin-top: 35px;
+}
+
+.secao-tabela h2 {
+  font-size: 1.3rem;
+  color: #c4b5fd;
+  margin-bottom: 15px;
+}
+
+.tabela-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #18181b;
+  border: 1px solid #3f3f46;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #27272a;
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: #27272a;
+  color: #a78bfa;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+td.col-disciplina, td:first-child {
+  text-align: left;
+}
+
+tr:hover {
+  background-color: #202024;
+}
+
+.situacao-bom {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.situacao-atencao {
+  color: #f87171;
+  font-weight: 600;
+}
+
+.situacao-indisponivel {
+  color: #71717a;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   ESTILOS EXCLUSIVOS DA ÁREA DE GRÁFICOS
+   ========================================================================== */
+
+.area-graficos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.grafico-card {
+  background-color: #18181b;
+  border: 1px solid #3f3f46;
+  border-top: 4px solid #8b5cf6;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.3s ease;
+}
+
+.grafico-card h2 {
+  font-size: 1rem;
+  color: #c4b5fd;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.cabecalho-card-faltas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cabecalho-card-faltas h2 {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.badge-perigo {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulsoPerigo 2s infinite;
+}
+
+.grafico-card.card-critico {
+  border: 1px solid #ef4444;
+  border-top: 4px solid #ef4444;
+}
+
+.grafico-container {
+  position: relative;
+  width: 100%;
+  height: 320px;
+}
+
+.grafico-container-alto {
+  height: 380px;
+}
+
+@keyframes pulsoPerigo {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Grid para Gráficos */
+@media (max-width: 900px) {
+  .area-graficos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .area-graficos {
+    grid-template-columns: 1fr;
+  }
+  
+  .grafico-container-alto {
+    height: 450px;
+  }
+}
